@@ -11,7 +11,7 @@ if (isset($_SESSION['logged_in'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>CounterApp - Register</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 <body>
@@ -31,20 +31,27 @@ if (isset($_SESSION['logged_in'])) {
         </div>
     </nav>
 
-
     <div class="jumbotron">
-    <h1>Login to counterApp</h1>
-    <p>Follow all your important dates...</p>
+        <h1>Register to counterApp</h1>
+        <p>Follow all your important dates...</p>
     </div>
 
     <div class="container">
-        <form action="check_login.php" method="post">
+        <form action="register_new_user.php" method="post">
             <div class="form-group">
+
                 <label for="code">User</label>
                 <input class="form-control" type="text" name="username">
                 
-                <label for="code">Code</label>
+                <label for="code">Password</label>
                 <input class="form-control" type="password" name="passwd">
+
+                <label for="code">Confirm password</label>
+                <input class="form-control" type="password" name="passwd2">
+
+                <label for="code">Email</label>
+                <input class="form-control" type="text" name="email">
+
             </div>
             <input class="btn btn-primary" type="submit" value="Login">
         </form>

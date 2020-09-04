@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['logged_in'])) {
+    header('Location: ../login.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +27,14 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="../">Counter</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./logout.php">Logout</a>
+                    <a class="nav-link" href="../logout.php">Logout</a>
                 </li>
+
             </ul>
         </div>
     </nav>
@@ -54,7 +63,7 @@
             </div>
             <div class="form-group">
                 <label for="msg">Message after finnished:</label>
-                <input class="form-control" type="text" name="msg">
+                <input class="form-control" type="text" name="message">
             </div>
             <div class="form-group">
                 <label for="message">Background image:</label>

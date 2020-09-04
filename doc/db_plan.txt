@@ -1,0 +1,13 @@
+countdown_app
+
+users
+- username
+- password
+( - email )
+
+counters
+- count_to (mihin lasketaan, pvm + klo)
+- topic
+- message
+- bg_image
+- require_login
